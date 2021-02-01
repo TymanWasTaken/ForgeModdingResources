@@ -1,5 +1,7 @@
 # Forge Modding Resources
 
+> Note: this is geared towards forge 1.8.9
+
 ## Tutorials on how to set up intellij for minecraft modding
 
 https://youtu.be/PfmlNiHonV0 (video, given by Microcontrollers#6733) <br>
