@@ -12,4 +12,6 @@ https://github.com/TymanWasTaken/ForgeModdingResources/blob/master/mytutorials/s
 
 https://gist.github.com/nornagon/f9ae87c01740db0518b7 (Collection of tutorials, given by Shakespaw#1906 ***__WARNING: this tutorial uses scala, which is similar to java but has many differences.__***) <br>
 
-More soon™
+https://github.com/TymanWasTaken/ForgeModdingResources/blob/master/mytutorials/events.md <sub><sup>made by me :)</sup></sub> <br>
+
+https://github.com/TymanWasTaken/ForgeModdingResources/blob/master/mytutorials/commands.md <sub><sup>made by me :)</sup></sub> <br>
