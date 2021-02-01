@@ -6,7 +6,7 @@ https://youtu.be/PfmlNiHonV0 (video, given by Microcontrollers#6733) <br>
 
 https://forums.minecraftforge.net/topic/21150-using-intellij-idea-for-mod-development-with-forgegradle/ (forge forums post, given by Phoube#5809) <br>
 
-
+https://github.com/TymanWasTaken/ForgeModdingResources/blob/master/mytutorials/setting-up.md <sub><sup>made by me :)</sup></sub> <br>
 
 ## Tutorials on how to actually make a mod
 
