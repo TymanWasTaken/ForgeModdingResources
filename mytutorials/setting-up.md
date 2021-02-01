@@ -7,10 +7,10 @@
 
 ## The following is different depending on IDE
 
-### Itellij
+### Intellij idea
 1. Open intellij and click open project.
 2. Navigate to your project's build.gradle (in the folder you just unzipped) and double click it. When it asks you if you want to import as a project, select yes.
-3. Wait for intellij to import the project. (it will likely ask you to update gradle, just click on the text and it auto-updates for you)
+3. Wait for intellij to import the project. (it will likely ask you to update gradle, just click on the red text and it auto-updates for you)
 4. Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
 5. This will likely take a few minutes, as it has to decompile minecraft.
 
@@ -28,6 +28,13 @@ This step will allow you to start minecraft from intellij and allow you to test 
     ![Image of arguments](https://media.discordapp.net/attachments/792642646907945000/797142663080968222/unknown.png)
 5. Save the run.
 
+### Eclipse
+To be totally honest, I don't even remember how to do it so this may not be entirely correct <sub><sup>intellij is better imo anyway<sup><sub>
+1. Open eclipse and open the folder you just unzipped as a project
+2. Open powershell/cmd/bash (whatever form of terminal you prefer), navigate to your project directory (likely using `cd path/to/project`)
+3. Run `./gradlew setupDecompWorkspace` (This will likely take a few minutes, as it has to decompile minecraft.)
+4. After that is done, run `./gradlew eclipse` to set up for eclipse.
+
 ## Next steps
 
 The MDK has default folders and directories to help you get started. You should rename these to fit your mod. The mdk contains the package `com.example.examplemod` and an `ExampleMod.java` file. It is recommended to rename this with the scheme `topleveldomain.name.modid`. You should also rename the ExampleMod file to fit your mod. Inside the newly renamed file, edit the modid and version string to your needs.
@@ -44,3 +51,7 @@ archivesBaseName = "Mod id"
 In your build.gradle file, there are two optional things you can change. 
 1. The first is the `mappings = "stable_20"` line in the `minecraft` block (this is only applicable for the 1.8.9 mdk). These mappings were designed for 1.8.8, so it is recommended to update them for 1.8.9. You can do this by changing `stable_20` to `stable_22`.
 2. The second is the `makeObfSourceJar = false` line. It is in a comment by default, and if it is kept in a comment, will make building your mod create a second file, `modid-version-sources.jar` allong with the normal `modid-version.jar` file. This extra file is simply your normal mod jar file, but includes the source code too. If you do not need this, uncomment the `makeObfSourceJar = false` line.
+
+<br><br><br>
+
+You now have your project set up, you just need to make the mod itself.
