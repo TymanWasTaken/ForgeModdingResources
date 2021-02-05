@@ -45,7 +45,7 @@ Since you register them as a class, you can have as many event functions in the 
 ## Cancelling events
 
 Canceling events can allow you to do many things, like stopping a player from rendering, which is what I will show in this example.
-> Note: In here I use the `RenderPlayerEvent.Pre` event. Events have have different states, `Event.Pre` (happens before the event), `Event` (happens during the event), `Event.Post` (happens after the event). When cancelling, it is usually best to use `Pre`
+> Note: In here I use the `RenderPlayerEvent.Pre` event. Events sometimes have different states, in this case, `Pre`. You can usually find these by just using your IDE's autocomplete/source file browsing
 
 ```java
 public class Events {
