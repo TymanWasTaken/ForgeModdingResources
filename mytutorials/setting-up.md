@@ -3,19 +3,19 @@
 
 1. Go to http://files.minecraftforge.net/ and download the MDK for your desired Minecraft version and forge version.
 2. Unzip the downloaded file into the directory where you want your mod's code to be.
-3. (Optional) Delete the unnecessary txt files, they are not needed for development.
+3. (Optional) Delete the unnecessary .txt files, they are not needed for development.
 
 ## The following is different depending on IDE
 
-### Intellij idea
-1. Open intellij and click open project.
+### Intellij IDEA
+1. Open Intellij and click open project.
 2. Navigate to your project's build.gradle (in the folder you just unzipped) and double click it. When it asks you if you want to import as a project, select yes.
-3. Wait for intellij to import the project. (it will likely ask you to update gradle, just click on the red text and it auto-updates for you)
+3. Wait for Intellij to import the project. (it will likely ask you to update gradle, just click on the red text and it auto-updates for you)
 4. Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
 5. This will likely take a few minutes, as it has to decompile minecraft.
 
 #### Optional: Setup runs
-This step will allow you to start minecraft from intellij and allow you to test easier.
+This step will allow you to start minecraft from Intellij and allow you to test easier.
 1. Locate the `genIntellijRuns` task in the gradle sidebar, and run it.
 2. Click the dropdown menu seen below, and select edit configurations.<br>
 ![Image of the dropdown](https://media.discordapp.net/attachments/792642646907945000/797142149099552778/unknown.png)
@@ -29,8 +29,8 @@ This step will allow you to start minecraft from intellij and allow you to test 
 5. Save the run.
 
 ### Eclipse
-To be totally honest, I don't even remember how to do it so this may not be entirely correct <sub><sup>intellij is better imo anyway<sup><sub>
-1. Open eclipse and open the folder you just unzipped as a project
+To be totally honest, I don't even remember how to do it so this may not be entirely correct <sub><sup>Intellij is better in my opinion anyway<sup><sub>
+1. Open Eclipse and open the folder you just unzipped as a project
 2. Open powershell/cmd/bash (whatever form of terminal you prefer), navigate to your project directory (likely using `cd path/to/project`)
 3. Run `./gradlew setupDecompWorkspace` (This will likely take a few minutes, as it has to decompile minecraft.)
 4. After that is done, run `./gradlew eclipse` to set up for eclipse.
