@@ -10,9 +10,15 @@
 ### Intellij IDEA
 1. Open Intellij and click open project.
 2. Navigate to your project's build.gradle (in the folder you just unzipped) and double click it. When it asks you if you want to import as a project, select yes.
-3. Wait for Intellij to import the project. (it will likely ask you to update gradle, just click on the red text and it auto-updates for you)
-4. Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
-5. This will likely take a few minutes, as it has to decompile minecraft.
+3. Wait for Intellij to import the project. (it will likely ask you to update gradle, just click on the blue text and it auto-updates for you)
+
+#### Fix gradle
+Recent changes by forge have broken gradle, so you will need to fix this before being able to use it.
+To fix it, just do exactly what I did here: https://github.com/TymanWasTaken/MCUtils/pull/6/files.
+
+#### Set up minecraft decompilation
+Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
+This will likely take a few minutes, as it has to decompile minecraft.
 
 #### Optional: Setup runs
 This step will allow you to start minecraft from Intellij and allow you to test easier.
