@@ -8,13 +8,15 @@
 ## The following is different depending on IDE
 
 ### Intellij IDEA
+
+### Import project
 1. Open Intellij and click open project.
 2. Navigate to your project's build.gradle (in the folder you just unzipped) and double click it. When it asks you if you want to import as a project, select yes.
 3. Wait for Intellij to import the project. (it will likely ask you to update gradle, just click on the blue text and it auto-updates for you)
 
 #### Fix gradle
 Recent changes by forge have broken gradle, so you will need to fix this before being able to use it.
-To fix it, just do exactly what I did here: https://github.com/TymanWasTaken/MCUtils/pull/6/files.
+To fix it, just do what this says: https://gist.github.com/asbyth/ba2cd9b66925f2437bbcfcd884d60af7.
 
 #### Set up minecraft decompilation
 Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
@@ -43,12 +45,12 @@ To be totally honest, I don't even remember how to do it so this may not be enti
 
 ## Next steps
 
-The MDK has default folders and directories to help you get started. You should rename these to fit your mod. The mdk contains the package `com.example.examplemod` and an `ExampleMod.java` file. It is recommended to rename this with the scheme `topleveldomain.name.modid`. You should also rename the ExampleMod file to fit your mod. Inside the newly renamed file, edit the modid and version string to your needs.
+The MDK has default folders and directories to help you get started. You should rename these to fit your mod. The mdk contains the package `com.example.examplemod` and an `ExampleMod.java` file. It is recommended to rename this with the scheme `topleveldomain.name.modid` (for example `com.tyman.coolmod`). You should also rename the ExampleMod file to fit your mod. Inside the newly renamed file, edit the modid and version string to your needs.
 
 Next is the build.gradle file in the root of your project. This is where you need to specify your package name, modid, and version. You should edit the following values as so: 
-```gradle
+```groovy
 version = "Mod version"
-group= "Package name" 
+group = "Package name" 
 archivesBaseName = "Mod id"
 ```
 
