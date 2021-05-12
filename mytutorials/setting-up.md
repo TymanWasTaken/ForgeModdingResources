@@ -20,6 +20,14 @@ To fix it, just do what this says: https://gist.github.com/asbyth/ba2cd9b66925f2
 
 #### Set up minecraft decompilation
 Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
+You might need to give gradle more ram, to do this right click `setupDecompWorkspace` and click `Modify Run Configuration`.
+
+![image](https://user-images.githubusercontent.com/67508414/118032750-4e814f00-b368-11eb-8992-744bdaf22787.png)
+
+Now in 'VM Options' type `-Xmx4g -Xms4g`.
+
+![image](https://user-images.githubusercontent.com/67508414/118032901-753f8580-b368-11eb-8e37-9ffd4dce4be4.png)
+
 This will likely take a few minutes, as it has to decompile minecraft.
 
 #### Optional: Setup runs
