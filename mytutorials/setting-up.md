@@ -67,6 +67,17 @@ archivesBaseName = "Mod id"
 In your build.gradle file, there are two optional things you can change. 
 1. The first is the `mappings = "stable_20"` line in the `minecraft` block (this is only applicable for the 1.8.9 mdk). These mappings were designed for 1.8.8, so it is recommended to update them for 1.8.9. You can do this by changing `stable_20` to `stable_22`.
 2. The second is the `makeObfSourceJar = false` line. It is in a comment by default, and if it is kept in a comment, will make building your mod create a second file, `modid-version-sources.jar` allong with the normal `modid-version.jar` file. This extra file is simply your normal mod jar file, but includes the source code too. If you do not need this, uncomment the `makeObfSourceJar = false` line.
+3. The third is to add one thing to your build.gradle, which will fix resources when using intellij runs or runClient. You can see the code to add below.
+```groovy
+task moveResources {
+    doLast {
+        ant.move file: "${buildDir}/resources/main",
+                todir: "${buildDir}/classes/java"
+    }
+}
+moveResources.dependsOn processResources
+classes.dependsOn moveResources
+```
 
 <br><br><br>
 
