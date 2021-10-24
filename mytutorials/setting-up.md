@@ -1,9 +1,7 @@
 # How to set up the forge development workspace
 (this is mostly for 1.8.9 but may work for other things)
 
-1. Go to http://files.minecraftforge.net/ and download the MDK for your desired Minecraft version and forge version.
-2. Unzip the downloaded file into the directory where you want your mod's code to be.
-3. (Optional) Delete the unnecessary .txt files, they are not needed for development.
+There used to be a list here but asbyth is epic and made a template so just download this https://github.com/asbyth/ForgeTemplate
 
 ## The following is different depending on IDE
 
@@ -13,10 +11,6 @@
 1. Open Intellij and click open project.
 2. Navigate to your project's build.gradle (in the folder you just unzipped) and double click it. When it asks you if you want to import as a project, select yes.
 3. Wait for Intellij to import the project. (it will likely ask you to update gradle, just click on the blue text and it auto-updates for you)
-
-#### Fix gradle
-Recent changes by forge have broken gradle, so you will need to fix this before being able to use it.
-To fix it, just do what this says: https://gist.github.com/asbyth/ba2cd9b66925f2437bbcfcd884d60af7.
 
 #### Set up minecraft decompilation
 Once imported, open the gradle sidebar (hover over the symbol in the bottom left) and run `setupDecompWorkspace` in the forgegradle folder.
@@ -53,30 +47,13 @@ To be totally honest, I don't even remember how to do it so this may not be enti
 
 ## Next steps
 
-The MDK has default folders and directories to help you get started. You should rename these to fit your mod. The mdk contains the package `com.example.examplemod` and an `ExampleMod.java` file. It is recommended to rename this with the scheme `topleveldomain.name.modid` (for example `com.tyman.coolmod`). You should also rename the ExampleMod file to fit your mod. Inside the newly renamed file, edit the modid and version string to your needs.
+The template has default folders and directories to help you get started. You should rename these to fit your mod. The mdk contains the package `com.example.examplemod` and an `ExampleMod.java` file. It is recommended to rename this with the scheme `topleveldomain.name.modid` (for example `com.tyman.coolmod`). You should also rename the ExampleMod file to fit your mod. Inside the newly renamed file, edit the modid and version string to your needs.
 
 Next is the build.gradle file in the root of your project. This is where you need to specify your package name, modid, and version. You should edit the following values as so: 
 ```groovy
 version = "Mod version"
 group = "Package name" 
 archivesBaseName = "Mod id"
-```
-
-## Optional but recommended steps
-
-In your build.gradle file, there are two optional things you can change. 
-1. The first is the `mappings = "stable_20"` line in the `minecraft` block (this is only applicable for the 1.8.9 mdk). These mappings were designed for 1.8.8, so it is recommended to update them for 1.8.9. You can do this by changing `stable_20` to `stable_22`.
-2. The second is the `makeObfSourceJar = false` line. It is in a comment by default, and if it is kept in a comment, will make building your mod create a second file, `modid-version-sources.jar` allong with the normal `modid-version.jar` file. This extra file is simply your normal mod jar file, but includes the source code too. If you do not need this, uncomment the `makeObfSourceJar = false` line.
-3. The third is to add one thing to your build.gradle, which will fix resources when using intellij runs or runClient. You can see the code to add below.
-```groovy
-task moveResources {
-    doLast {
-        ant.move file: "${buildDir}/resources/main",
-                todir: "${buildDir}/classes/java"
-    }
-}
-moveResources.dependsOn processResources
-classes.dependsOn moveResources
 ```
 
 <br><br><br>
